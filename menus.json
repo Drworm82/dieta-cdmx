@@ -109,3 +109,45 @@
       "ingredientes": [
         "2 rebanadas de pan",
         "2 rebanadas de queso panela",
+        "1 jitomate en rodajas"
+      ],
+      "preparacion": [
+        "Arma el sándwich con queso y jitomate.",
+        "Calienta en sartén o sandwichera hasta que el queso se derrita.",
+        "Sirve caliente."
+      ],
+      "tiempo": "10 minutos"
+    },
+    "comida": {
+      "nombre": "Sopa de verduras con frijoles",
+      "ingredientes": [
+        "1 taza de frijoles cocidos",
+        "1 zanahoria",
+        "1 papa",
+        "1/2 cebolla",
+        "Caldo de verduras"
+      ],
+      "preparacion": [
+        "Pica las verduras y cocina en caldo hasta que estén suaves.",
+        "Agrega los frijoles y calienta unos minutos más.",
+        "Sirve caliente."
+      ],
+      "tiempo": "40 minutos"
+    },
+    "cena": {
+      "nombre": "Quesadillas con acelga",
+      "ingredientes": [
+        "2 tortillas de maíz",
+        "Queso fresco",
+        "Acelga picada"
+      ],
+      "preparacion": [
+        "Saltea la acelga.",
+        "Coloca la acelga y el queso en una tortilla, cubre con la otra tortilla.",
+        "Calienta en sartén hasta que el queso se derrita.",
+        "Sirve caliente."
+      ],
+      "tiempo": "15 minutos"
+    }
+  }
+]
