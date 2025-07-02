@@ -1,0 +1,111 @@
+[
+  {
+    "day": 1,
+    "date": "2025-07-01",
+    "desayuno": {
+      "nombre": "Avena con plátano",
+      "ingredientes": [
+        "½ taza de avena",
+        "1 plátano",
+        "Canela al gusto",
+        "1 taza de leche o agua"
+      ],
+      "preparacion": [
+        "Cocina la avena en leche o agua durante 7 minutos.",
+        "Agrega rodajas de plátano y canela al gusto.",
+        "Sirve caliente."
+      ],
+      "tiempo": "10 minutos"
+    },
+    "comida": {
+      "nombre": "Lentejas con arroz y jitomate",
+      "ingredientes": [
+        "½ taza de lentejas",
+        "½ taza de arroz",
+        "2 jitomates",
+        "1 diente de ajo",
+        "1/2 cebolla"
+      ],
+      "preparacion": [
+        "Cocina las lentejas en agua con ajo y cebolla.",
+        "Prepara arroz blanco por separado.",
+        "Saltea jitomate picado y mezcla con las lentejas.",
+        "Sirve lentejas con arroz caliente."
+      ],
+      "tiempo": "30 minutos"
+    },
+    "cena": {
+      "nombre": "Tostadas de pollo con lechuga",
+      "ingredientes": [
+        "2 tostadas",
+        "100g de pollo cocido y deshebrado",
+        "Lechuga picada",
+        "Crema al gusto",
+        "Salsa al gusto"
+      ],
+      "preparacion": [
+        "Coloca el pollo deshebrado sobre las tostadas.",
+        "Agrega lechuga, crema y salsa al gusto.",
+        "Disfruta."
+      ],
+      "tiempo": "15 minutos"
+    }
+  },
+  {
+    "day": 2,
+    "date": "2025-07-02",
+    "desayuno": {
+      "nombre": "Huevos revueltos con espinaca",
+      "ingredientes": [
+        "2 huevos",
+        "1 taza de espinaca",
+        "Sal y pimienta al gusto"
+      ],
+      "preparacion": [
+        "Bate los huevos con sal y pimienta.",
+        "Saltea la espinaca en un sartén.",
+        "Agrega los huevos y revuelve hasta cocinar.",
+        "Sirve caliente."
+      ],
+      "tiempo": "10 minutos"
+    },
+    "comida": {
+      "nombre": "Calabacitas con pollo y arroz",
+      "ingredientes": [
+        "1 calabacita mediana",
+        "100g de pollo",
+        "½ taza de arroz",
+        "1/2 cebolla",
+        "Aceite y sal al gusto"
+      ],
+      "preparacion": [
+        "Cocina el arroz blanco.",
+        "Saltea cebolla y pollo hasta dorar.",
+        "Agrega calabacitas picadas y cocina hasta que estén tiernas.",
+        "Sirve con arroz."
+      ],
+      "tiempo": "30 minutos"
+    },
+    "cena": {
+      "nombre": "Pan tostado con guacamole",
+      "ingredientes": [
+        "2 rebanadas de pan integral",
+        "1 aguacate maduro",
+        "Cilantro, limón, sal y jitomate picado"
+      ],
+      "preparacion": [
+        "Tuesta el pan.",
+        "Prepara guacamole machacando el aguacate y mezclando con jitomate, cilantro, limón y sal.",
+        "Unta el guacamole en el pan tostado y sirve."
+      ],
+      "tiempo": "15 minutos"
+    }
+  },
+  {
+    "day": 3,
+    "date": "2025-07-03",
+    "desayuno": {
+      "nombre": "Sandwich de queso y jitomate",
+      "ingredientes": [
+        "2 rebanadas de pan",
+        "2 rebanadas de queso panela",
