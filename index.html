@@ -149,10 +149,11 @@
       ul.innerHTML = '';
       let total = 0;
       datos.ingredientes.forEach(ing => {
+        const precio = typeof ing.precio === 'number' ? ing.precio : 0;
         const li = document.createElement('li');
-        li.innerHTML = `${ing.nombre} <span class="precio">($${ing.precio.toFixed(2)})</span>`;
+        li.innerHTML = `${ing.nombre} <span class="precio">($${precio.toFixed(2)})</span>`;
         ul.appendChild(li);
-        total += ing.precio;
+        total += precio;
       });
       document.getElementById(`${tipo}-total`).textContent = total.toFixed(2);
 
