@@ -2,42 +2,168 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dieta CDMX</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dieta Económica CDMX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+    }
+    h2 {
+      color: #4CAF50;
+      margin-top: 2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+    }
+    th,
+    td {
+      padding: 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    button.show-recipe {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      padding: 3px 8px;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+    }
+    button.show-recipe:hover {
+      background-color: #45a049;
+    }
+    .recipe {
+      display: none;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      background: #f0f8ff;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Menú del Día</h1>
-    <p>📣 Frase del día: ¡Hoy aprovecha el nopal! Está fresco y barato en los mercados de CDMX.</p>
+    <h1>Dieta Económica y de Temporada</h1>
+    <p>Comer bien todo el año en Ciudad de México sin gastar de más</p>
   </header>
-  <section class="menu">
-    <div class="bloque">
-      <h2>🥣 Desayuno – $18 MXN</h2>
-      <ul>
-        <li>Quesadillas de flor de calabaza</li>
-        <li>Agua de papaya</li>
-      </ul>
-    </div>
-    <div class="bloque">
-      <h2>🍽️ Comida – $35 MXN</h2>
-      <ul>
-        <li>Caldo de pollo con verduras</li>
-        <li>Arroz rojo</li>
-        <li>Agua de limón</li>
-      </ul>
-    </div>
-    <div class="bloque">
-      <h2>🍮 Cena – $24 MXN</h2>
-      <ul>
-        <li>Panqué de plátano (sin gluten)</li>
-        <li>Leche de avena</li>
-      </ul>
-    </div>
-  </section>
-  <footer>
-    <p>💵 Total estimado del día: $77 MXN</p>
-    <p>📊 Precios estimados con base en <a href="https://www.sedeco.cdmx.gob.mx/servicios/servicio/seguimiento-de-precios-de-la-canasta-basica" target="_blank">SEDECO CDMX</a></p>
-  </footer>
+
+  <div class="container">
+    <h2>🗓️ Julio – Frutas y Verduras de Temporada</h2>
+    <ul>
+      <li>Frutas: plátano, papaya, sandía, melón, mango, guayaba</li>
+      <li>Verduras: calabaza, chayote, espinaca, acelga, jitomate, papa, zanahoria, cebolla</li>
+    </ul>
+
+    <h2>🍽️ Menú Semanal Económico (Ejemplo)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Día</th>
+          <th>Desayuno</th>
+          <th>Comida</th>
+          <th>Cena</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lunes</td>
+          <td>
+            Avena con plátano
+            <br />
+            <button class="show-recipe" data-target="receta-avena">Ver receta</button>
+            <div id="receta-avena" class="recipe">
+              <strong>Receta Avena con plátano:</strong><br />
+              1. Cocina 1/2 taza de avena en agua o leche.<br />
+              2. Agrega rodajas de plátano y canela al gusto.<br />
+              3. Sirve caliente.
+            </div>
+          </td>
+          <td>
+            Lentejas con arroz y jitomate
+            <br />
+            <button class="show-recipe" data-target="receta-lentejas">Ver receta</button>
+            <div id="receta-lentejas" class="recipe">
+              <strong>Receta Lentejas con arroz y jitomate:</strong><br />
+              1. Cocina lentejas en agua con ajo y cebolla.<br />
+              2. Prepara arroz blanco por separado.<br />
+              3. Saltea jitomate picado y mezcla con las lentejas.<br />
+              4. Sirve lentejas con arroz caliente.
+            </div>
+          </td>
+          <td>
+            Tostadas de pollo con lechuga
+            <br />
+            <button class="show-recipe" data-target="receta-tostadas">Ver receta</button>
+            <div id="receta-tostadas" class="recipe">
+              <strong>Receta Tostadas de pollo con lechuga:</strong><br />
+              1. Deshebra pollo cocido.<br />
+              2. Coloca pollo y lechuga picada sobre tostadas.<br />
+              3. Añade salsa al gusto y crema.
+            </div>
+          </td>
+        </tr>
+
+        <!-- Puedes agregar más días siguiendo el mismo patrón -->
+
+      </tbody>
+    </table>
+
+    <h2>💡 Tip</h2>
+    <p>Compra frutas y verduras en mercados locales o tianguis para obtener mejores precios y frescura.</p>
+  </div>
+
+  <footer>© 2025 Dieta Económica CDMX – Sitio en desarrollo</footer>
+
+  <script>
+    document.querySelectorAll('.show-recipe').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const recetaDiv = document.getElementById(targetId);
+        if (recetaDiv.style.display === 'none' || recetaDiv.style.display === '') {
+          recetaDiv.style.display = 'block';
+          btn.textContent = 'Ocultar receta';
+        } else {
+          recetaDiv.style.display = 'none';
+          btn.textContent = 'Ver receta';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
