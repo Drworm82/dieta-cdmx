@@ -15,7 +15,8 @@
         "Agrega rodajas de plátano y canela al gusto.",
         "Sirve caliente."
       ],
-      "tiempo": "10 minutos"
+      "tiempo": "10 minutos",
+      "costo_aprox": 6.5
     },
     "comida": {
       "nombre": "Lentejas con arroz y jitomate",
@@ -32,7 +33,8 @@
         "Saltea jitomate picado y mezcla con las lentejas.",
         "Sirve lentejas con arroz caliente."
       ],
-      "tiempo": "30 minutos"
+      "tiempo": "30 minutos",
+      "costo_aprox": 12
     },
     "cena": {
       "nombre": "Tostadas de pollo con lechuga",
@@ -48,7 +50,8 @@
         "Agrega lechuga, crema y salsa al gusto.",
         "Disfruta."
       ],
-      "tiempo": "15 minutos"
+      "tiempo": "15 minutos",
+      "costo_aprox": 10
     }
   },
   {
@@ -67,7 +70,8 @@
         "Agrega los huevos y revuelve hasta cocinar.",
         "Sirve caliente."
       ],
-      "tiempo": "10 minutos"
+      "tiempo": "10 minutos",
+      "costo_aprox": 7.5
     },
     "comida": {
       "nombre": "Calabacitas con pollo y arroz",
@@ -84,7 +88,8 @@
         "Agrega calabacitas picadas y cocina hasta que estén tiernas.",
         "Sirve con arroz."
       ],
-      "tiempo": "30 minutos"
+      "tiempo": "30 minutos",
+      "costo_aprox": 14
     },
     "cena": {
       "nombre": "Pan tostado con guacamole",
@@ -98,7 +103,8 @@
         "Prepara guacamole machacando el aguacate y mezclando con jitomate, cilantro, limón y sal.",
         "Unta el guacamole en el pan tostado y sirve."
       ],
-      "tiempo": "15 minutos"
+      "tiempo": "15 minutos",
+      "costo_aprox": 10
     }
   },
   {
@@ -116,7 +122,8 @@
         "Calienta en sartén o sandwichera hasta que el queso se derrita.",
         "Sirve caliente."
       ],
-      "tiempo": "10 minutos"
+      "tiempo": "10 minutos",
+      "costo_aprox": 8
     },
     "comida": {
       "nombre": "Sopa de verduras con frijoles",
@@ -132,7 +139,8 @@
         "Agrega los frijoles y calienta unos minutos más.",
         "Sirve caliente."
       ],
-      "tiempo": "40 minutos"
+      "tiempo": "40 minutos",
+      "costo_aprox": 11
     },
     "cena": {
       "nombre": "Quesadillas con acelga",
@@ -147,7 +155,8 @@
         "Calienta en sartén hasta que el queso se derrita.",
         "Sirve caliente."
       ],
-      "tiempo": "15 minutos"
+      "tiempo": "15 minutos",
+      "costo_aprox": 9
     }
   }
 ]
