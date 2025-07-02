@@ -77,6 +77,7 @@
       <p><strong>Preparación:</strong></p>
       <ol id="desayuno-preparacion"></ol>
       <p><em>Tiempo aproximado: <span id="desayuno-tiempo"></span></em></p>
+      <p><em>Costo aproximado: $<span id="desayuno-costo"></span></em></p>
     </div>
 
     <div class="menu-section" id="comida">
@@ -87,6 +88,7 @@
       <p><strong>Preparación:</strong></p>
       <ol id="comida-preparacion"></ol>
       <p><em>Tiempo aproximado: <span id="comida-tiempo"></span></em></p>
+      <p><em>Costo aproximado: $<span id="comida-costo"></span></em></p>
     </div>
 
     <div class="menu-section" id="cena">
@@ -97,6 +99,7 @@
       <p><strong>Preparación:</strong></p>
       <ol id="cena-preparacion"></ol>
       <p><em>Tiempo aproximado: <span id="cena-tiempo"></span></em></p>
+      <p><em>Costo aproximado: $<span id="cena-costo"></span></em></p>
     </div>
   </main>
 
@@ -114,7 +117,6 @@
         return response.json();
       })
       .then(data => {
-        console.log('Datos recibidos:', data);
         menus = data;
         if (menus.length === 0) {
           throw new Error('El arreglo de menús está vacío');
@@ -138,18 +140,21 @@
       llenarLista('desayuno-ingredientes', menu.desayuno.ingredientes);
       llenarLista('desayuno-preparacion', menu.desayuno.preparacion, true);
       document.getElementById('desayuno-tiempo').textContent = menu.desayuno.tiempo;
+      document.getElementById('desayuno-costo').textContent = menu.desayuno.costo_aprox.toFixed(2);
 
       // Comida
       document.getElementById('comida-nombre').textContent = menu.comida.nombre;
       llenarLista('comida-ingredientes', menu.comida.ingredientes);
       llenarLista('comida-preparacion', menu.comida.preparacion, true);
       document.getElementById('comida-tiempo').textContent = menu.comida.tiempo;
+      document.getElementById('comida-costo').textContent = menu.comida.costo_aprox.toFixed(2);
 
       // Cena
       document.getElementById('cena-nombre').textContent = menu.cena.nombre;
       llenarLista('cena-ingredientes', menu.cena.ingredientes);
       llenarLista('cena-preparacion', menu.cena.preparacion, true);
       document.getElementById('cena-tiempo').textContent = menu.cena.tiempo;
+      document.getElementById('cena-costo').textContent = menu.cena.costo_aprox.toFixed(2);
     }
 
     function llenarLista(id, items, esOrdenada = false) {
