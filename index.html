@@ -53,6 +53,11 @@
       padding: 1rem 0;
       color: #666;
     }
+    .precio {
+      color: #333;
+      font-style: italic;
+      margin-left: 10px;
+    }
   </style>
 </head>
 <body>
@@ -77,7 +82,7 @@
       <p><strong>Preparación:</strong></p>
       <ol id="desayuno-preparacion"></ol>
       <p><em>Tiempo aproximado: <span id="desayuno-tiempo"></span></em></p>
-      <p><em>Costo aproximado: $<span id="desayuno-costo"></span></em></p>
+      <p><em>Total: $<span id="desayuno-total"></span></em></p>
     </div>
 
     <div class="menu-section" id="comida">
@@ -88,7 +93,7 @@
       <p><strong>Preparación:</strong></p>
       <ol id="comida-preparacion"></ol>
       <p><em>Tiempo aproximado: <span id="comida-tiempo"></span></em></p>
-      <p><em>Costo aproximado: $<span id="comida-costo"></span></em></p>
+      <p><em>Total: $<span id="comida-total"></span></em></p>
     </div>
 
     <div class="menu-section" id="cena">
@@ -99,7 +104,7 @@
       <p><strong>Preparación:</strong></p>
       <ol id="cena-preparacion"></ol>
       <p><em>Tiempo aproximado: <span id="cena-tiempo"></span></em></p>
-      <p><em>Costo aproximado: $<span id="cena-costo"></span></em></p>
+      <p><em>Total: $<span id="cena-total"></span></em></p>
     </div>
   </main>
 
@@ -111,16 +116,12 @@
 
     fetch('menus.json')
       .then(response => {
-        if (!response.ok) {
-          throw new Error('Error en la respuesta HTTP: ' + response.status);
-        }
+        if (!response.ok) throw new Error('Error en la respuesta HTTP: ' + response.status);
         return response.json();
       })
       .then(data => {
         menus = data;
-        if (menus.length === 0) {
-          throw new Error('El arreglo de menús está vacío');
-        }
+        if (menus.length === 0) throw new Error('El arreglo de menús está vacío');
         mostrarMenu(currentDay);
         actualizarBotones();
       })
@@ -135,35 +136,34 @@
 
       document.getElementById('dateTitle').textContent = `Día ${menu.day} - ${menu.date}`;
 
-      // Desayuno
-      document.getElementById('desayuno-nombre').textContent = menu.desayuno.nombre;
-      llenarLista('desayuno-ingredientes', menu.desayuno.ingredientes);
-      llenarLista('desayuno-preparacion', menu.desayuno.preparacion, true);
-      document.getElementById('desayuno-tiempo').textContent = menu.desayuno.tiempo;
-      document.getElementById('desayuno-costo').textContent = menu.desayuno.costo_aprox.toFixed(2);
-
-      // Comida
-      document.getElementById('comida-nombre').textContent = menu.comida.nombre;
-      llenarLista('comida-ingredientes', menu.comida.ingredientes);
-      llenarLista('comida-preparacion', menu.comida.preparacion, true);
-      document.getElementById('comida-tiempo').textContent = menu.comida.tiempo;
-      document.getElementById('comida-costo').textContent = menu.comida.costo_aprox.toFixed(2);
-
-      // Cena
-      document.getElementById('cena-nombre').textContent = menu.cena.nombre;
-      llenarLista('cena-ingredientes', menu.cena.ingredientes);
-      llenarLista('cena-preparacion', menu.cena.preparacion, true);
-      document.getElementById('cena-tiempo').textContent = menu.cena.tiempo;
-      document.getElementById('cena-costo').textContent = menu.cena.costo_aprox.toFixed(2);
+      mostrarComida('desayuno', menu.desayuno);
+      mostrarComida('comida', menu.comida);
+      mostrarComida('cena', menu.cena);
     }
 
-    function llenarLista(id, items, esOrdenada = false) {
-      const lista = document.getElementById(id);
-      lista.innerHTML = '';
-      items.forEach(item => {
+    function mostrarComida(tipo, datos) {
+      document.getElementById(`${tipo}-nombre`).textContent = datos.nombre;
+      document.getElementById(`${tipo-tiempo}`).textContent = datos.tiempo;
+
+      // Ingredientes con precio
+      const ul = document.getElementById(`${tipo}-ingredientes`);
+      ul.innerHTML = '';
+      let total = 0;
+      datos.ingredientes.forEach(ing => {
         const li = document.createElement('li');
-        li.textContent = item;
-        lista.appendChild(li);
+        li.innerHTML = `${ing.nombre} <span class="precio">($${ing.precio.toFixed(2)})</span>`;
+        ul.appendChild(li);
+        total += ing.precio;
+      });
+      document.getElementById(`${tipo}-total`).textContent = total.toFixed(2);
+
+      // Preparación
+      const ol = document.getElementById(`${tipo}-preparacion`);
+      ol.innerHTML = '';
+      datos.preparacion.forEach(paso => {
+        const li = document.createElement('li');
+        li.textContent = paso;
+        ol.appendChild(li);
       });
     }
 
