@@ -106,17 +106,25 @@
     let menus = [];
     let currentDay = 0;
 
-    // Cargar JSON con fetch
     fetch('menus.json')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error en la respuesta HTTP: ' + response.status);
+        }
+        return response.json();
+      })
       .then(data => {
+        console.log('Datos recibidos:', data);
         menus = data;
+        if (menus.length === 0) {
+          throw new Error('El arreglo de menús está vacío');
+        }
         mostrarMenu(currentDay);
         actualizarBotones();
       })
       .catch(error => {
-        document.getElementById('dateTitle').textContent = 'Error cargando menús.';
-        console.error(error);
+        document.getElementById('dateTitle').textContent = 'Error cargando menús: ' + error.message;
+        console.error('Error al cargar JSON:', error);
       });
 
     function mostrarMenu(dayIndex) {
@@ -144,7 +152,6 @@
       document.getElementById('cena-tiempo').textContent = menu.cena.tiempo;
     }
 
-    // Función para llenar ul o ol
     function llenarLista(id, items, esOrdenada = false) {
       const lista = document.getElementById(id);
       lista.innerHTML = '';
