@@ -67,4 +67,87 @@
         "Agrega los huevos y revuelve hasta cocinar.",
         "Sirve caliente."
       ],
-      "
+      "tiempo": "10 minutos"
+    },
+    "comida": {
+      "nombre": "Calabacitas con pollo y arroz",
+      "ingredientes": [
+        "1 calabacita mediana",
+        "100g de pollo",
+        "½ taza de arroz",
+        "1/2 cebolla",
+        "Aceite y sal al gusto"
+      ],
+      "preparacion": [
+        "Cocina el arroz blanco.",
+        "Saltea cebolla y pollo hasta dorar.",
+        "Agrega calabacitas picadas y cocina hasta que estén tiernas.",
+        "Sirve con arroz."
+      ],
+      "tiempo": "30 minutos"
+    },
+    "cena": {
+      "nombre": "Pan tostado con guacamole",
+      "ingredientes": [
+        "2 rebanadas de pan integral",
+        "1 aguacate maduro",
+        "Cilantro, limón, sal y jitomate picado"
+      ],
+      "preparacion": [
+        "Tuesta el pan.",
+        "Prepara guacamole machacando el aguacate y mezclando con jitomate, cilantro, limón y sal.",
+        "Unta el guacamole en el pan tostado y sirve."
+      ],
+      "tiempo": "15 minutos"
+    }
+  },
+  {
+    "day": 3,
+    "date": "2025-07-03",
+    "desayuno": {
+      "nombre": "Sandwich de queso y jitomate",
+      "ingredientes": [
+        "2 rebanadas de pan",
+        "2 rebanadas de queso panela",
+        "1 jitomate en rodajas"
+      ],
+      "preparacion": [
+        "Arma el sándwich con queso y jitomate.",
+        "Calienta en sartén o sandwichera hasta que el queso se derrita.",
+        "Sirve caliente."
+      ],
+      "tiempo": "10 minutos"
+    },
+    "comida": {
+      "nombre": "Sopa de verduras con frijoles",
+      "ingredientes": [
+        "1 taza de frijoles cocidos",
+        "1 zanahoria",
+        "1 papa",
+        "1/2 cebolla",
+        "Caldo de verduras"
+      ],
+      "preparacion": [
+        "Pica las verduras y cocina en caldo hasta que estén suaves.",
+        "Agrega los frijoles y calienta unos minutos más.",
+        "Sirve caliente."
+      ],
+      "tiempo": "40 minutos"
+    },
+    "cena": {
+      "nombre": "Quesadillas con acelga",
+      "ingredientes": [
+        "2 tortillas de maíz",
+        "Queso fresco",
+        "Acelga picada"
+      ],
+      "preparacion": [
+        "Saltea la acelga.",
+        "Coloca la acelga y el queso en una tortilla, cubre con la otra tortilla.",
+        "Calienta en sartén hasta que el queso se derrita.",
+        "Sirve caliente."
+      ],
+      "tiempo": "15 minutos"
+    }
+  }
+]
