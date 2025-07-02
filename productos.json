@@ -1,0 +1,130 @@
+[
+  {
+    "nombre": "avena",
+    "keywords": ["avena", "avena hojuelas", "avena instantánea"],
+    "unidad": "kg",
+    "empaque_estimado": "800 g",
+    "precio_estimado": 25
+  },
+  {
+    "nombre": "plátano",
+    "keywords": ["plátano", "plátano tabasco"],
+    "unidad": "kg",
+    "precio_estimado": 20
+  },
+  {
+    "nombre": "leche",
+    "keywords": ["leche entera", "leche deslactosada"],
+    "unidad": "litro",
+    "precio_estimado": 22
+  },
+  {
+    "nombre": "canela",
+    "keywords": ["canela molida", "canela en polvo"],
+    "unidad": "frasco",
+    "precio_estimado": 15
+  },
+  {
+    "nombre": "huevo",
+    "keywords": ["huevo blanco", "huevo rojo"],
+    "unidad": "pieza",
+    "precio_estimado": 2.5
+  },
+  {
+    "nombre": "espinaca",
+    "keywords": ["espinaca fresca", "espinaca baby"],
+    "unidad": "manojo",
+    "precio_estimado": 12
+  },
+  {
+    "nombre": "pan",
+    "keywords": ["pan de caja", "pan integral", "pan bimbo"],
+    "unidad": "paquete",
+    "precio_estimado": 35
+  },
+  {
+    "nombre": "queso panela",
+    "keywords": ["queso panela", "queso fresco"],
+    "unidad": "kg",
+    "empaque_estimado": "400 g",
+    "precio_estimado": 55
+  },
+  {
+    "nombre": "jitomate",
+    "keywords": ["jitomate saladet", "jitomate bola"],
+    "unidad": "kg",
+    "precio_estimado": 25
+  },
+  {
+    "nombre": "yogurt",
+    "keywords": ["yogurt natural", "yogurt sin azúcar"],
+    "unidad": "kg",
+    "precio_estimado": 35
+  },
+  {
+    "nombre": "papaya",
+    "keywords": ["papaya maradol"],
+    "unidad": "kg",
+    "precio_estimado": 22
+  },
+  {
+    "nombre": "mango",
+    "keywords": ["mango ataulfo", "mango manila"],
+    "unidad": "kg",
+    "precio_estimado": 30
+  },
+  {
+    "nombre": "pollo",
+    "keywords": ["pechuga de pollo", "pollo cocido"],
+    "unidad": "kg",
+    "precio_estimado": 80
+  },
+  {
+    "nombre": "tostadas",
+    "keywords": ["tostadas horneadas", "tostadas clásicas"],
+    "unidad": "paquete",
+    "precio_estimado": 20
+  },
+  {
+    "nombre": "lechuga",
+    "keywords": ["lechuga romana", "lechuga orejona"],
+    "unidad": "pieza",
+    "precio_estimado": 12
+  },
+  {
+    "nombre": "crema",
+    "keywords": ["crema acidificada", "crema alpura", "crema lala"],
+    "unidad": "frasco",
+    "precio_estimado": 20
+  },
+  {
+    "nombre": "salsa",
+    "keywords": ["salsa valentina", "salsa botanera"],
+    "unidad": "botella",
+    "precio_estimado": 15
+  },
+  {
+    "nombre": "zanahoria",
+    "keywords": ["zanahoria", "zanahoria fresca"],
+    "unidad": "kg",
+    "precio_estimado": 16
+  },
+  {
+    "nombre": "calabacita",
+    "keywords": ["calabacita", "calabaza italiana"],
+    "unidad": "kg",
+    "precio_estimado": 22
+  },
+  {
+    "nombre": "frijoles",
+    "keywords": ["frijol negro cocido", "frijol bayo cocido"],
+    "unidad": "kg",
+    "precio_estimado": 30
+  },
+  {
+    "nombre": "tortilla",
+    "keywords": ["tortilla de maíz", "tortilla blanca"],
+    "unidad": "kg",
+    "precio_estimado": 22
+  }
+]
