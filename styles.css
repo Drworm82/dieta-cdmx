@@ -1,0 +1,23 @@
+
+body {
+  font-family: sans-serif;
+  background: #fff8f2;
+  color: #333;
+  margin: 0;
+  padding: 1em;
+}
+header, footer {
+  background-color: #ffe8d6;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.menu .bloque {
+  border: 1px solid #d9b99b;
+  background: #fff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+h1, h2 {
+  color: #a0522d;
+}
