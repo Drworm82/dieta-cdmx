@@ -143,9 +143,8 @@
 
     function mostrarComida(tipo, datos) {
       document.getElementById(`${tipo}-nombre`).textContent = datos.nombre;
-      document.getElementById(`${tipo-tiempo}`).textContent = datos.tiempo;
+      document.getElementById(`${tipo}-tiempo`).textContent = datos.tiempo;
 
-      // Ingredientes con precio
       const ul = document.getElementById(`${tipo}-ingredientes`);
       ul.innerHTML = '';
       let total = 0;
@@ -157,7 +156,6 @@
       });
       document.getElementById(`${tipo}-total`).textContent = total.toFixed(2);
 
-      // Preparación
       const ol = document.getElementById(`${tipo}-preparacion`);
       ol.innerHTML = '';
       datos.preparacion.forEach(paso => {
