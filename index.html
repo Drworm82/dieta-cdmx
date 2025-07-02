@@ -3,166 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dieta Económica CDMX</title>
+  <title>Dieta Económica CDMX - Menús diarios</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
       background: #f9f9f9;
       color: #333;
     }
     header {
-      background-color: #4CAF50;
+      background-color: #4caf50;
       color: white;
       padding: 1rem;
       text-align: center;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 1rem;
+      margin-bottom: 1rem;
     }
     h2 {
-      color: #4CAF50;
-      margin-top: 2rem;
+      color: #4caf50;
     }
-    ul {
-      padding-left: 1.2rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    table,
-    th,
-    td {
-      border: 1px solid #ccc;
-    }
-    th,
-    td {
-      padding: 0.5rem;
-      text-align: left;
-      vertical-align: top;
-    }
-    button.show-recipe {
-      margin-top: 4px;
-      font-size: 0.85rem;
-      padding: 3px 8px;
+    button {
       cursor: pointer;
       background-color: #4caf50;
       color: white;
       border: none;
-      border-radius: 3px;
+      padding: 8px 16px;
+      margin: 0 5px 10px 0;
+      border-radius: 4px;
+      font-size: 1rem;
     }
-    button.show-recipe:hover {
-      background-color: #45a049;
+    button:disabled {
+      background-color: #a5d6a7;
+      cursor: default;
     }
-    .recipe {
-      display: none;
-      margin-top: 8px;
-      font-size: 0.9rem;
-      background: #f0f8ff;
-      padding: 8px;
+    .menu-section {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
       border-radius: 5px;
+      box-shadow: 0 0 5px #ccc;
+    }
+    ul, ol {
+      margin: 0 0 1rem 20px;
     }
     footer {
       text-align: center;
-      padding: 1rem;
       font-size: 0.9rem;
-      background: #eee;
-      margin-top: 2rem;
+      padding: 1rem 0;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Dieta Económica y de Temporada</h1>
-    <p>Comer bien todo el año en Ciudad de México sin gastar de más</p>
+    <p>Menús diarios con recetas completas para Ciudad de México</p>
   </header>
 
-  <div class="container">
-    <h2>🗓️ Julio – Frutas y Verduras de Temporada</h2>
-    <ul>
-      <li>Frutas: plátano, papaya, sandía, melón, mango, guayaba</li>
-      <li>Verduras: calabaza, chayote, espinaca, acelga, jitomate, papa, zanahoria, cebolla</li>
-    </ul>
+  <main>
+    <div>
+      <button id="prevBtn">Anterior</button>
+      <button id="nextBtn">Siguiente</button>
+    </div>
 
-    <h2>🍽️ Menú Semanal Económico (Ejemplo)</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Día</th>
-          <th>Desayuno</th>
-          <th>Comida</th>
-          <th>Cena</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lunes</td>
-          <td>
-            Avena con plátano
-            <br />
-            <button class="show-recipe" data-target="receta-avena">Ver receta</button>
-            <div id="receta-avena" class="recipe">
-              <strong>Receta Avena con plátano:</strong><br />
-              1. Cocina 1/2 taza de avena en agua o leche.<br />
-              2. Agrega rodajas de plátano y canela al gusto.<br />
-              3. Sirve caliente.
-            </div>
-          </td>
-          <td>
-            Lentejas con arroz y jitomate
-            <br />
-            <button class="show-recipe" data-target="receta-lentejas">Ver receta</button>
-            <div id="receta-lentejas" class="recipe">
-              <strong>Receta Lentejas con arroz y jitomate:</strong><br />
-              1. Cocina lentejas en agua con ajo y cebolla.<br />
-              2. Prepara arroz blanco por separado.<br />
-              3. Saltea jitomate picado y mezcla con las lentejas.<br />
-              4. Sirve lentejas con arroz caliente.
-            </div>
-          </td>
-          <td>
-            Tostadas de pollo con lechuga
-            <br />
-            <button class="show-recipe" data-target="receta-tostadas">Ver receta</button>
-            <div id="receta-tostadas" class="recipe">
-              <strong>Receta Tostadas de pollo con lechuga:</strong><br />
-              1. Deshebra pollo cocido.<br />
-              2. Coloca pollo y lechuga picada sobre tostadas.<br />
-              3. Añade salsa al gusto y crema.
-            </div>
-          </td>
-        </tr>
+    <h2 id="dateTitle">Cargando menú...</h2>
 
-        <!-- Puedes agregar más días siguiendo el mismo patrón -->
+    <div class="menu-section" id="desayuno">
+      <h3>Desayuno</h3>
+      <strong id="desayuno-nombre"></strong>
+      <p><strong>Ingredientes:</strong></p>
+      <ul id="desayuno-ingredientes"></ul>
+      <p><strong>Preparación:</strong></p>
+      <ol id="desayuno-preparacion"></ol>
+      <p><em>Tiempo aproximado: <span id="desayuno-tiempo"></span></em></p>
+    </div>
 
-      </tbody>
-    </table>
+    <div class="menu-section" id="comida">
+      <h3>Comida</h3>
+      <strong id="comida-nombre"></strong>
+      <p><strong>Ingredientes:</strong></p>
+      <ul id="comida-ingredientes"></ul>
+      <p><strong>Preparación:</strong></p>
+      <ol id="comida-preparacion"></ol>
+      <p><em>Tiempo aproximado: <span id="comida-tiempo"></span></em></p>
+    </div>
 
-    <h2>💡 Tip</h2>
-    <p>Compra frutas y verduras en mercados locales o tianguis para obtener mejores precios y frescura.</p>
-  </div>
+    <div class="menu-section" id="cena">
+      <h3>Cena</h3>
+      <strong id="cena-nombre"></strong>
+      <p><strong>Ingredientes:</strong></p>
+      <ul id="cena-ingredientes"></ul>
+      <p><strong>Preparación:</strong></p>
+      <ol id="cena-preparacion"></ol>
+      <p><em>Tiempo aproximado: <span id="cena-tiempo"></span></em></p>
+    </div>
+  </main>
 
   <footer>© 2025 Dieta Económica CDMX – Sitio en desarrollo</footer>
 
   <script>
-    document.querySelectorAll('.show-recipe').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-target');
-        const recetaDiv = document.getElementById(targetId);
-        if (recetaDiv.style.display === 'none' || recetaDiv.style.display === '') {
-          recetaDiv.style.display = 'block';
-          btn.textContent = 'Ocultar receta';
-        } else {
-          recetaDiv.style.display = 'none';
-          btn.textContent = 'Ver receta';
-        }
+    let menus = [];
+    let currentDay = 0;
+
+    // Cargar JSON con fetch
+    fetch('menus.json')
+      .then(response => response.json())
+      .then(data => {
+        menus = data;
+        mostrarMenu(currentDay);
+        actualizarBotones();
+      })
+      .catch(error => {
+        document.getElementById('dateTitle').textContent = 'Error cargando menús.';
+        console.error(error);
       });
+
+    function mostrarMenu(dayIndex) {
+      const menu = menus[dayIndex];
+      if (!menu) return;
+
+      document.getElementById('dateTitle').textContent = `Día ${menu.day} - ${menu.date}`;
+
+      // Desayuno
+      document.getElementById('desayuno-nombre').textContent = menu.desayuno.nombre;
+      llenarLista('desayuno-ingredientes', menu.desayuno.ingredientes);
+      llenarLista('desayuno-preparacion', menu.desayuno.preparacion, true);
+      document.getElementById('desayuno-tiempo').textContent = menu.desayuno.tiempo;
+
+      // Comida
+      document.getElementById('comida-nombre').textContent = menu.comida.nombre;
+      llenarLista('comida-ingredientes', menu.comida.ingredientes);
+      llenarLista('comida-preparacion', menu.comida.preparacion, true);
+      document.getElementById('comida-tiempo').textContent = menu.comida.tiempo;
+
+      // Cena
+      document.getElementById('cena-nombre').textContent = menu.cena.nombre;
+      llenarLista('cena-ingredientes', menu.cena.ingredientes);
+      llenarLista('cena-preparacion', menu.cena.preparacion, true);
+      document.getElementById('cena-tiempo').textContent = menu.cena.tiempo;
+    }
+
+    // Función para llenar ul o ol
+    function llenarLista(id, items, esOrdenada = false) {
+      const lista = document.getElementById(id);
+      lista.innerHTML = '';
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        lista.appendChild(li);
+      });
+    }
+
+    function actualizarBotones() {
+      document.getElementById('prevBtn').disabled = currentDay === 0;
+      document.getElementById('nextBtn').disabled = currentDay === menus.length - 1;
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentDay > 0) {
+        currentDay--;
+        mostrarMenu(currentDay);
+        actualizarBotones();
+      }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentDay < menus.length - 1) {
+        currentDay++;
+        mostrarMenu(currentDay);
+        actualizarBotones();
+      }
     });
   </script>
 </body>
