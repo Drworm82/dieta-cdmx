@@ -1,0 +1,38 @@
+{
+  "enero": [
+    "acelga", "apio", "betabel", "brócoli", "coliflor", "espinaca", "lechuga", "naranja", "zanahoria"
+  ],
+  "febrero": [
+    "acelga", "espinaca", "betabel", "brócoli", "lechuga", "fresa", "naranja", "toronja", "zanahoria"
+  ],
+  "marzo": [
+    "betabel", "espinaca", "lechuga", "col", "nopal", "fresa", "toronja", "naranja", "pepino"
+  ],
+  "abril": [
+    "nopal", "pepino", "espinaca", "jitomate", "mango", "papaya", "melón", "zanahoria", "aguacate"
+  ],
+  "mayo": [
+    "mango", "sandía", "melón", "calabacita", "aguacate", "jitomate", "chayote", "ejote"
+  ],
+  "junio": [
+    "mango", "sandía", "calabacita", "jitomate", "papaya", "plátano", "pepino", "nopal", "cebolla"
+  ],
+  "julio": [
+    "calabaza", "elote", "jitomate", "chayote", "papaya", "mango", "sandía", "melón", "plátano", "nopal"
+  ],
+  "agosto": [
+    "aguacate", "betabel", "durazno", "pera", "zanahoria", "espinaca", "calabaza", "cebolla", "elote"
+  ],
+  "septiembre": [
+    "chayote", "zanahoria", "manzana", "pera", "calabaza", "brócoli", "espinaca", "lechuga"
+  ],
+  "octubre": [
+    "espinaca", "zanahoria", "acelga", "lechuga", "mandarina", "naranja", "manzana", "plátano"
+  ],
+  "noviembre": [
+    "acelga", "espinaca", "zanahoria", "lechuga", "col", "mandarina", "naranja", "betabel"
+  ],
+  "diciembre": [
+    "acelga", "espinaca", "zanahoria", "brócoli", "naranja", "manzana", "jícama", "mandarina"
+  ]
+}
