@@ -1,180 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dieta Económica CDMX - Menús diarios</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 1rem;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #4caf50;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      color: #4caf50;
-    }
-    button {
-      cursor: pointer;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      margin: 0 5px 10px 0;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    button:disabled {
-      background-color: #a5d6a7;
-      cursor: default;
-    }
-    .menu-section {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 0 5px #ccc;
-    }
-    ul, ol {
-      margin: 0 0 1rem 20px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 1rem 0;
-      color: #666;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menús diarios CDMX</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Dieta Económica y de Temporada</h1>
-    <p>Menús diarios con recetas completas para Ciudad de México</p>
-  </header>
-
-  <main>
-    <div>
-      <button id="prevBtn">Anterior</button>
-      <button id="nextBtn">Siguiente</button>
-    </div>
-
-    <h2 id="dateTitle">Cargando menú...</h2>
-
-    <div class="menu-section" id="desayuno">
-      <h3>Desayuno</h3>
-      <strong id="desayuno-nombre"></strong>
-      <p><strong>Ingredientes:</strong></p>
-      <ul id="desayuno-ingredientes"></ul>
-      <p><strong>Preparación:</strong></p>
-      <ol id="desayuno-preparacion"></ol>
-      <p><em>Tiempo aproximado: <span id="desayuno-tiempo"></span></em></p>
-    </div>
-
-    <div class="menu-section" id="comida">
-      <h3>Comida</h3>
-      <strong id="comida-nombre"></strong>
-      <p><strong>Ingredientes:</strong></p>
-      <ul id="comida-ingredientes"></ul>
-      <p><strong>Preparación:</strong></p>
-      <ol id="comida-preparacion"></ol>
-      <p><em>Tiempo aproximado: <span id="comida-tiempo"></span></em></p>
-    </div>
-
-    <div class="menu-section" id="cena">
-      <h3>Cena</h3>
-      <strong id="cena-nombre"></strong>
-      <p><strong>Ingredientes:</strong></p>
-      <ul id="cena-ingredientes"></ul>
-      <p><strong>Preparación:</strong></p>
-      <ol id="cena-preparacion"></ol>
-      <p><em>Tiempo aproximado: <span id="cena-tiempo"></span></em></p>
-    </div>
-  </main>
-
-  <footer>© 2025 Dieta Económica CDMX – Sitio en desarrollo</footer>
+  <h1>Menús diarios CDMX</h1>
+  <div id="menus"></div>
 
   <script>
-    let menus = [];
-    let currentDay = 0;
+    async function cargarMenus() {
+      try {
+        const response = await fetch('menus.json');
+        if (!response.ok) throw new Error('No se pudo cargar menus.json');
+        const menus = await response.json();
 
-    // Cargar JSON con fetch
-    fetch('menus.json')
-      .then(response => response.json())
-      .then(data => {
-        menus = data;
-        mostrarMenu(currentDay);
-        actualizarBotones();
-      })
-      .catch(error => {
-        document.getElementById('dateTitle').textContent = 'Error cargando menús.';
-        console.error(error);
-      });
+        const container = document.getElementById('menus');
+        container.innerHTML = '';
 
-    function mostrarMenu(dayIndex) {
-      const menu = menus[dayIndex];
-      if (!menu) return;
+        menus.forEach(menu => {
+          const div = document.createElement('div');
+          div.className = 'menu-day';
+          div.innerHTML = `
+            <h2>Día ${menu.day} - ${menu.date}</h2>
 
-      document.getElementById('dateTitle').textContent = `Día ${menu.day} - ${menu.date}`;
+            <h3>Desayuno: ${menu.desayuno.nombre}</h3>
+            <ul>${menu.desayuno.ingredientes.map(i => `<li>${i.nombre} - $${i.precio.toFixed(2)}</li>`).join('')}</ul>
+            <p><strong>Preparación:</strong></p>
+            <ol>${menu.desayuno.preparacion.map(p => `<li>${p}</li>`).join('')}</ol>
+            <p><strong>Tiempo:</strong> ${menu.desayuno.tiempo}</p>
+            <p><strong>Costo Desayuno:</strong> $${menu.desayuno.ingredientes.reduce((a,b) => a + b.precio, 0).toFixed(2)}</p>
 
-      // Desayuno
-      document.getElementById('desayuno-nombre').textContent = menu.desayuno.nombre;
-      llenarLista('desayuno-ingredientes', menu.desayuno.ingredientes);
-      llenarLista('desayuno-preparacion', menu.desayuno.preparacion, true);
-      document.getElementById('desayuno-tiempo').textContent = menu.desayuno.tiempo;
+            <h3>Comida: ${menu.comida.nombre}</h3>
+            <ul>${menu.comida.ingredientes.map(i => `<li>${i.nombre} - $${i.precio.toFixed(2)}</li>`).join('')}</ul>
+            <p><strong>Preparación:</strong></p>
+            <ol>${menu.comida.preparacion.map(p => `<li>${p}</li>`).join('')}</ol>
+            <p><strong>Tiempo:</strong> ${menu.comida.tiempo}</p>
+            <p><strong>Costo Comida:</strong> $${menu.comida.ingredientes.reduce((a,b) => a + b.precio, 0).toFixed(2)}</p>
 
-      // Comida
-      document.getElementById('comida-nombre').textContent = menu.comida.nombre;
-      llenarLista('comida-ingredientes', menu.comida.ingredientes);
-      llenarLista('comida-preparacion', menu.comida.preparacion, true);
-      document.getElementById('comida-tiempo').textContent = menu.comida.tiempo;
+            <h3>Cena: ${menu.cena.nombre}</h3>
+            <ul>${menu.cena.ingredientes.map(i => `<li>${i.nombre} - $${i.precio.toFixed(2)}</li>`).join('')}</ul>
+            <p><strong>Preparación:</strong></p>
+            <ol>${menu.cena.preparacion.map(p => `<li>${p}</li>`).join('')}</ol>
+            <p><strong>Tiempo:</strong> ${menu.cena.tiempo}</p>
+            <p><strong>Costo Cena:</strong> $${menu.cena.ingredientes.reduce((a,b) => a + b.precio, 0).toFixed(2)}</p>
 
-      // Cena
-      document.getElementById('cena-nombre').textContent = menu.cena.nombre;
-      llenarLista('cena-ingredientes', menu.cena.ingredientes);
-      llenarLista('cena-preparacion', menu.cena.preparacion, true);
-      document.getElementById('cena-tiempo').textContent = menu.cena.tiempo;
-    }
-
-    // Función para llenar ul o ol
-    function llenarLista(id, items, esOrdenada = false) {
-      const lista = document.getElementById(id);
-      lista.innerHTML = '';
-      items.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        lista.appendChild(li);
-      });
-    }
-
-    function actualizarBotones() {
-      document.getElementById('prevBtn').disabled = currentDay === 0;
-      document.getElementById('nextBtn').disabled = currentDay === menus.length - 1;
-    }
-
-    document.getElementById('prevBtn').addEventListener('click', () => {
-      if (currentDay > 0) {
-        currentDay--;
-        mostrarMenu(currentDay);
-        actualizarBotones();
+            <hr />
+          `;
+          container.appendChild(div);
+        });
+      } catch (error) {
+        document.getElementById('menus').textContent = 'Error cargando menús: ' + error.message;
       }
-    });
-
-    document.getElementById('nextBtn').addEventListener('click', () => {
-      if (currentDay < menus.length - 1) {
-        currentDay++;
-        mostrarMenu(currentDay);
-        actualizarBotones();
-      }
-    });
+    }
+    cargarMenus();
   </script>
 </body>
 </html>
