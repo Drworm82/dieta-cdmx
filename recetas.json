@@ -1,0 +1,162 @@
+[
+  {
+    "nombre": "Avena con plátano",
+    "tipo": "desayuno",
+    "ingredientes": ["avena", "plátano", "leche", "canela"],
+    "temporada": ["junio", "julio", "octubre"],
+    "instrucciones": "Cocina la avena con leche. Agrega plátano en rodajas y canela.",
+    "tiempo": "10 minutos"
+  },
+  {
+    "nombre": "Huevos con espinaca",
+    "tipo": "desayuno",
+    "ingredientes": ["huevo", "espinaca", "sal", "aceite"],
+    "temporada": ["enero", "febrero", "marzo", "octubre", "noviembre"],
+    "instrucciones": "Saltea la espinaca y agrega huevo batido. Cocina y sirve.",
+    "tiempo": "10 minutos"
+  },
+  {
+    "nombre": "Sandwich de jitomate y queso panela",
+    "tipo": "desayuno",
+    "ingredientes": ["pan", "jitomate", "queso panela"],
+    "temporada": ["abril", "mayo", "junio", "julio"],
+    "instrucciones": "Coloca jitomate y queso entre pan y tuesta.",
+    "tiempo": "10 minutos"
+  },
+  {
+    "nombre": "Fruta de temporada con yogurt",
+    "tipo": "desayuno",
+    "ingredientes": ["yogurt", "papaya", "plátano", "mango"],
+    "temporada": ["junio", "julio", "agosto"],
+    "instrucciones": "Corta la fruta y mezcla con yogurt.",
+    "tiempo": "5 minutos"
+  },
+  {
+    "nombre": "Tostadas de pollo con lechuga",
+    "tipo": "cena",
+    "ingredientes": ["pollo", "tostadas", "lechuga", "crema", "salsa"],
+    "temporada": ["todo el año"],
+    "instrucciones": "Coloca pollo en tostadas, agrega lechuga, crema y salsa.",
+    "tiempo": "15 minutos"
+  },
+  {
+    "nombre": "Sopa de verduras",
+    "tipo": "comida",
+    "ingredientes": ["zanahoria", "papa", "chayote", "ejote", "caldo"],
+    "temporada": ["julio", "agosto", "septiembre"],
+    "instrucciones": "Hierve las verduras en caldo. Sirve caliente.",
+    "tiempo": "40 minutos"
+  },
+  {
+    "nombre": "Lentejas con arroz",
+    "tipo": "comida",
+    "ingredientes": ["lentejas", "arroz", "jitomate", "ajo", "cebolla"],
+    "temporada": ["julio", "abril", "agosto"],
+    "instrucciones": "Cocina lentejas con verduras, sirve con arroz.",
+    "tiempo": "30 minutos"
+  },
+  {
+    "nombre": "Tacos de nopal con queso",
+    "tipo": "comida",
+    "ingredientes": ["nopal", "queso fresco", "tortillas"],
+    "temporada": ["marzo", "abril", "junio", "julio"],
+    "instrucciones": "Asa el nopal, coloca queso y sirve en tortilla.",
+    "tiempo": "15 minutos"
+  },
+  {
+    "nombre": "Quesadillas con flor de calabaza",
+    "tipo": "comida",
+    "ingredientes": ["flor de calabaza", "queso", "tortilla", "cebolla"],
+    "temporada": ["julio", "agosto", "septiembre"],
+    "instrucciones": "Saltea la flor con cebolla, rellena tortillas con queso y calienta.",
+    "tiempo": "20 minutos"
+  },
+  {
+    "nombre": "Ensalada de sandía y pepino",
+    "tipo": "cena",
+    "ingredientes": ["sandía", "pepino", "limón"],
+    "temporada": ["junio", "julio", "agosto"],
+    "instrucciones": "Corta la fruta y mezcla con jugo de limón.",
+    "tiempo": "5 minutos"
+  },
+  {
+    "nombre": "Arroz con plátano",
+    "tipo": "comida",
+    "ingredientes": ["arroz", "plátano macho", "aceite"],
+    "temporada": ["julio", "agosto"],
+    "instrucciones": "Fríe el plátano en rodajas y sirve con arroz.",
+    "tiempo": "30 minutos"
+  },
+  {
+    "nombre": "Elote con mayonesa y queso",
+    "tipo": "cena",
+    "ingredientes": ["elote", "mayonesa", "queso rallado", "limón", "chile"],
+    "temporada": ["julio", "agosto"],
+    "instrucciones": "Hierve el elote, agrega mayonesa, queso y chile.",
+    "tiempo": "25 minutos"
+  },
+  {
+    "nombre": "Tacos dorados de papa",
+    "tipo": "comida",
+    "ingredientes": ["papa", "tortilla", "aceite", "lechuga", "crema"],
+    "temporada": ["todo el año"],
+    "instrucciones": "Haz puré, rellena tortillas, fríe y decora con lechuga.",
+    "tiempo": "35 minutos"
+  },
+  {
+    "nombre": "Ensalada de zanahoria y betabel",
+    "tipo": "cena",
+    "ingredientes": ["zanahoria", "betabel", "limón", "sal"],
+    "temporada": ["enero", "febrero", "noviembre", "diciembre"],
+    "instrucciones": "Ralla zanahoria y betabel, mezcla con limón y sal.",
+    "tiempo": "10 minutos"
+  },
+  {
+    "nombre": "Molletes",
+    "tipo": "desayuno",
+    "ingredientes": ["bolillo", "frijoles", "queso", "salsa"],
+    "temporada": ["todo el año"],
+    "instrucciones": "Parte el bolillo, unta frijoles, agrega queso y gratina.",
+    "tiempo": "15 minutos"
+  },
+  {
+    "nombre": "Pasta con jitomate",
+    "tipo": "comida",
+    "ingredientes": ["pasta", "jitomate", "ajo", "aceite"],
+    "temporada": ["abril", "mayo", "junio", "julio"],
+    "instrucciones": "Cuece la pasta, prepara salsa de jitomate, mezcla.",
+    "tiempo": "25 minutos"
+  },
+  {
+    "nombre": "Sándwich de huevo",
+    "tipo": "desayuno",
+    "ingredientes": ["pan", "huevo", "lechuga", "jitomate"],
+    "temporada": ["marzo", "abril", "julio", "agosto"],
+    "instrucciones": "Fríe el huevo y arma el sándwich con verduras.",
+    "tiempo": "10 minutos"
+  },
+  {
+    "nombre": "Tamal de elote",
+    "tipo": "cena",
+    "ingredientes": ["elote", "harina de maíz", "manteca", "azúcar"],
+    "temporada": ["julio", "agosto", "septiembre"],
+    "instrucciones": "Prepara la masa con elote molido, arma y cuece al vapor.",
+    "tiempo": "60 minutos"
+  },
+  {
+    "nombre": "Calabacitas con queso",
+    "tipo": "comida",
+    "ingredientes": ["calabacita", "cebolla", "ajo", "queso fresco"],
+    "temporada": ["mayo", "junio", "julio", "agosto"],
+    "instrucciones": "Saltea calabacita con cebolla y ajo, agrega queso.",
+    "tiempo": "25 minutos"
+  },
+  {
+    "nombre": "Tortitas de espinaca",
+    "tipo": "comida",
+    "ingredientes": ["espinaca", "huevo", "pan molido", "aceite"],
+    "temporada": ["enero", "febrero", "octubre", "noviembre"],
+    "instrucciones": "Mezcla espinaca cocida con huevo y pan molido, fríe.",
+    "tiempo": "30 minutos"
+  }
+]
