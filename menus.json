@@ -105,4 +105,49 @@
     "day": 3,
     "date": "2025-07-03",
     "desayuno": {
-      "nombre": "Sándwi
+      "nombre": "Sándwich de queso y jitomate",
+      "ingredientes": [
+        { "nombre": "2 rebanadas de pan", "precio": 2.0 },
+        { "nombre": "2 rebanadas de queso panela", "precio": 4.0 },
+        { "nombre": "1 jitomate en rodajas", "precio": 2.0 }
+      ],
+      "preparacion": [
+        "Arma el sándwich con queso y jitomate.",
+        "Calienta en sartén o sandwichera hasta que el queso se derrita.",
+        "Sirve caliente."
+      ],
+      "tiempo": "10 minutos"
+    },
+    "comida": {
+      "nombre": "Sopa de verduras con frijoles",
+      "ingredientes": [
+        { "nombre": "1 taza de frijoles cocidos", "precio": 3.0 },
+        { "nombre": "1 zanahoria", "precio": 1.0 },
+        { "nombre": "1 papa", "precio": 2.0 },
+        { "nombre": "1/2 cebolla", "precio": 1.0 },
+        { "nombre": "Caldo de verduras", "precio": 1.0 }
+      ],
+      "preparacion": [
+        "Pica las verduras y cocina en caldo hasta que estén suaves.",
+        "Agrega los frijoles y calienta unos minutos más.",
+        "Sirve caliente."
+      ],
+      "tiempo": "40 minutos"
+    },
+    "cena": {
+      "nombre": "Quesadillas con acelga",
+      "ingredientes": [
+        { "nombre": "2 tortillas de maíz", "precio": 2.0 },
+        { "nombre": "Queso fresco", "precio": 4.0 },
+        { "nombre": "Acelga picada", "precio": 2.5 }
+      ],
+      "preparacion": [
+        "Saltea la acelga.",
+        "Coloca la acelga y el queso en una tortilla, cubre con la otra tortilla.",
+        "Calienta en sartén hasta que el queso se derrita.",
+        "Sirve caliente."
+      ],
+      "tiempo": "15 minutos"
+    }
+  }
+]
